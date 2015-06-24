@@ -13,7 +13,7 @@
 	"toolbar"
   ],
   "license": "MIT",
-  "homepage": "https://github.com/helzgate",
+  "homepage": "http://helzgate.github.io/footerbar",
   "ignore": [
     "**/.*",
     "node_modules",
