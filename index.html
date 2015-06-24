@@ -19,25 +19,25 @@
     </section>
 
     <section class="main-content">
-      <h3>
-<a id="angular-footerbar" class="anchor" href="#angular-footerbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Footerbar</h3>
+      <h2>
+<a id="angular-footerbar" class="anchor" href="#angular-footerbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Footerbar</h2>
 
 <p>This Angular directive will place a bar at the bottom of your webpage.  Perfect for a mobile web page!  You can add icons if you like but not necessary.</p>
 
-<h2>
-<a id="bower-install" class="anchor" href="#bower-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower Install:</h2>
+<h3>
+<a id="bower-install" class="anchor" href="#bower-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower Install:</h3>
 
 <pre><code>$ bower install footerbar
 </code></pre>
 
-<h2>
-<a id="add-the-footerbarjs-to-your-indexhtml" class="anchor" href="#add-the-footerbarjs-to-your-indexhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the footerbar.js to your index.html</h2>
+<h3>
+<a id="add-the-footerbarjs-to-your-indexhtml" class="anchor" href="#add-the-footerbarjs-to-your-indexhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the footerbar.js to your index.html</h3>
 
 <pre><code>&lt;script src="js/directives/footerbar.js"&gt;&lt;/script&gt;
 </code></pre>
 
-<h2>
-<a id="add-directive-to-your-main-module" class="anchor" href="#add-directive-to-your-main-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add directive to your main module:</h2>
+<h3>
+<a id="add-directive-to-your-main-module" class="anchor" href="#add-directive-to-your-main-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add directive to your main module:</h3>
 
 <p>Angular Material is a requirement so make sure you add this to your project.</p>
 
@@ -46,8 +46,8 @@
 })();
 </code></pre>
 
-<h2>
-<a id="create-footer-items" class="anchor" href="#create-footer-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Footer Items:</h2>
+<h3>
+<a id="create-footer-items" class="anchor" href="#create-footer-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Footer Items:</h3>
 
 <p>Create a list of footer items (or whatever you want to call it) in your controller.  I use vm.footeritems but you can use $scope.footeritems of course.</p>
 
@@ -79,16 +79,16 @@
 
 <p>The above will create a footer bar with only 2 menu items whose text is white and size is 48px labeled "Home" and "Website" with no icons.</p>
 
-<h2>
-<a id="configure-html" class="anchor" href="#configure-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure HTML</h2>
+<h3>
+<a id="configure-html" class="anchor" href="#configure-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure HTML</h3>
 
 <p>place the following somewhere in the body of your index.html:</p>
 
 <pre><code>&lt;footer-bar items="vm.footeritems"&gt;&lt;/footer-bar&gt;
 </code></pre>
 
-<h2>
-<a id="apply-css" class="anchor" href="#apply-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apply CSS:</h2>
+<h3>
+<a id="apply-css" class="anchor" href="#apply-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apply CSS:</h3>
 
 <p>Make sure you have material-design.css and bootstrap.css loaded.
 Put the following content in your CSS (or use the one provided in the repository):</p>
@@ -110,16 +110,16 @@ Put the following content in your CSS (or use the one provided in the repository
 }
 </code></pre>
 
-<h2>
-<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+<h3>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h3>
 
 <p>barcolor specifies the color of the complete footer bar (default:blue):</p>
 
 <pre><code>&lt;footer-bar items="vm.footeritems" barcolor="#6170B5"&gt;&lt;/footer-bar&gt;
 </code></pre>
 
-<h2>
-<a id="icons" class="anchor" href="#icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icons</h2>
+<h3>
+<a id="icons" class="anchor" href="#icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icons</h3>
 
 <p>To add icons, use an iconprovider:</p>
 
