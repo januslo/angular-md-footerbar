@@ -1,6 +1,6 @@
 {
   "name": "footerbar",
-  "main": ["footerbar.js", "footerbar.css"]
+  "main": ["footerbar.js", "footerbar.css"],
   "version": "0.1.0",
   "authors": [
     "Clay Brinlee <helzgate@hotmail.com>"
