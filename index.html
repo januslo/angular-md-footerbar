@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Footerbar by helzgate</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Footerbar</h1>
+      <h2 class="project-tagline">Angular responsive Footer Bar!</h2>
+      <a href="https://github.com/helzgate/footerbar" class="btn">View on GitHub</a>
+      <a href="https://github.com/helzgate/footerbar/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/helzgate/footerbar/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h3>
+<a id="angular-footerbar" class="anchor" href="#angular-footerbar" aria-hidden="true"><span class="octicon octicon-link"></span></a>Angular Footerbar</h3>
+
+<p>This Angular directive will place a bar at the bottom of your webpage.  Perfect for a mobile web page!  You can add icons if you like but not necessary.</p>
+
+<h2>
+<a id="bower-install" class="anchor" href="#bower-install" aria-hidden="true"><span class="octicon octicon-link"></span></a>Bower Install:</h2>
+
+<pre><code>$ bower install footerbar
+</code></pre>
+
+<h2>
+<a id="add-the-footerbarjs-to-your-indexhtml" class="anchor" href="#add-the-footerbarjs-to-your-indexhtml" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add the footerbar.js to your index.html</h2>
+
+<pre><code>&lt;script src="js/directives/footerbar.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<h2>
+<a id="add-directive-to-your-main-module" class="anchor" href="#add-directive-to-your-main-module" aria-hidden="true"><span class="octicon octicon-link"></span></a>Add directive to your main module:</h2>
+
+<p>Angular Material is a requirement so make sure you add this to your project.</p>
+
+<pre><code>(function () {
+    angular.module('app', ['ngMaterial', 'ngAnimate', 'ngAria', 'footerBar']);
+})();
+</code></pre>
+
+<h2>
+<a id="create-footer-items" class="anchor" href="#create-footer-items" aria-hidden="true"><span class="octicon octicon-link"></span></a>Create Footer Items:</h2>
+
+<p>Create a list of footer items (or whatever you want to call it) in your controller.  I use vm.footeritems but you can use $scope.footeritems of course.</p>
+
+<pre><code>vm.footeritems = [
+            {
+                name: 'Home',
+                icon: '',
+                size: {
+                    size: 'md-48',
+                    padding: 10
+                },
+                style: {
+                    fill: 'white'
+                }
+            },
+            {
+                name: 'Website',
+                icon: '',
+                size: {
+                    size: 'md-48',
+                    padding: 10
+                },
+                style: {
+                    fill: 'white'
+                }
+            }
+];
+</code></pre>
+
+<p>The above will create a footer bar with only 2 menu items whose text is white and size is 48px labeled "Home" and "Website" with no icons.</p>
+
+<h2>
+<a id="configure-html" class="anchor" href="#configure-html" aria-hidden="true"><span class="octicon octicon-link"></span></a>Configure HTML</h2>
+
+<p>place the following somewhere in the body of your index.html:</p>
+
+<pre><code>&lt;footer-bar items="vm.footeritems"&gt;&lt;/footer-bar&gt;
+</code></pre>
+
+<h2>
+<a id="apply-css" class="anchor" href="#apply-css" aria-hidden="true"><span class="octicon octicon-link"></span></a>Apply CSS:</h2>
+
+<p>Put the following content in your CSS (or use the one provided in the repository):</p>
+
+<pre><code>#footerbar{
+    width:100%;
+    bottom: 0pt;
+    padding-left:0px;
+    margin-left:0px;
+    position:fixed;
+    left:0px;
+    z-index: 100;
+}
+#footertable {
+    margin-bottom:0px;
+}
+</code></pre>
+
+<h2>
+<a id="options" class="anchor" href="#options" aria-hidden="true"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p>barcolor specifies the color of the complete footer bar (default:blue):</p>
+
+<pre><code>&lt;footer-bar items="vm.footeritems" barcolor="#6170B5"&gt;&lt;/footer-bar&gt;
+</code></pre>
+
+<h2>
+<a id="icons" class="anchor" href="#icons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Icons</h2>
+
+<p>To add icons, use an iconprovider:</p>
+
+<pre><code>(function(){
+angular.module('app')
+    .config( function( $mdIconProvider ){
+    $mdIconProvider.icon("magnify", 'icons/magnifying.svg', 128);
+  });
+})();
+</code></pre>
+
+<p>Now i can use the svg icon by name when setting up my footer items:</p>
+
+<pre><code>vm.footeritems = [
+            {
+                name: 'Home',
+                icon: 'magnify',
+                size: {
+                    size: 'md-48',
+                    padding: 10
+                },
+                style: {
+                    fill: 'white'
+                }
+            },
+            {
+                name: 'Website',
+                icon: '',
+                size: {
+                    size: 'md-48',
+                    padding: 10
+                },
+                style: {
+                    fill: 'white'
+                }
+            }
+];
+</code></pre>
+
+<p>In the above, only the "Home" menu item will have a magnifying glass icon which has nothing to do with "Home" of course!</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/helzgate/footerbar">Footerbar</a> is maintained by <a href="https://github.com/helzgate">helzgate</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
+
