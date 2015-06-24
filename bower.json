@@ -1,0 +1,24 @@
+{
+  "name": "footerbar",
+  "main": ["footerbar.js", "footerbar.css"]
+  "version": "0.1.0",
+  "authors": [
+    "Clay Brinlee <helzgate@hotmail.com>"
+  ],
+  "description": "Angular Footer Bar",
+  "keywords": [
+    "angular",
+	"footer",
+	"bar",
+	"toolbar"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/helzgate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

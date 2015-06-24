@@ -1,0 +1,12 @@
+#footerbar{
+    width:100%;
+    bottom: 0pt;
+    padding-left:0px;
+    margin-left:0px;
+    position:fixed;
+    left:0px;
+    z-index: 100;
+}
+#footertable {
+    margin-bottom:0px;
+}
