@@ -6,7 +6,17 @@
     position:fixed;
     left:0px;
     z-index: 100;
+    display: block;
 }
 #footertable {
+    width: 100%;
+    border-spacing:0;
     margin-bottom:0px;
+}
+#footertable md-content{
+    overflow: hidden;
+    margin: 0;
+}
+#footerbar #footertable .md-button{
+    min-width: 80%;
 }
